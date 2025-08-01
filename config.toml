@@ -1,38 +1,13 @@
-# Hugo Configuration for ScrapingBee Landing Pages
-# Minimal configuration to avoid build issues
-
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "ScrapingBee"
-description = "Web scraping made simple and reliable. Extract data from any website with our powerful API."
-author = "ScrapingBee"
-email = "contact@scrapingbee.com"
 
-# Disable RSS generation to avoid template errors
+# Disable RSS and taxonomies to avoid build errors
 disableRSS = true
-
-# Disable taxonomy generation to avoid template issues
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  brand_name = "ScrapingBee"
-  author = "ScrapingBee"
-  favicon = "/favicon.ico"
-  description = "Professional web scraping tools and APIs for developers"
-  company = "ScrapingBee"
-  
-  # Social media
-  github = "https://github.com/scrapingbee"
-  twitter = "https://twitter.com/scrapingbee"
-  linkedin = "https://linkedin.com/company/scrapingbee"
-  
-  # Contact information
-  email = "contact@scrapingbee.com"
-  
-  # Analytics (optional)
-  googleAnalytics = ""
-  
-  # Hero section configuration
+  # Hero section
   [params.hero]
     heading = "Web Scraping Made Simple"
     intro = "Extract data from any website with our powerful web scraping API. Access real-time data, automate data collection, and scale your scraping projects without worrying about IP blocks or complex infrastructure."
@@ -46,18 +21,18 @@ disableKinds = ["taxonomy", "term"]
     text = "View Pricing"
     url = "#pricing"
     style = "secondary"
-  
-  # Navigation configuration
+
+  # Navigation
   [[params.navigation]]
     title = "All Scrapers"
     url = "/scrapers"
-  
-  # Scrapers section configuration
+
+  # Scrapers section
   [params.scrapers_section]
     heading = "Popular Scrapers"
     intro = "Ready-to-use scrapers for the most popular platforms and websites."
-  
-  # Footer configuration
+
+  # Footer sections
   [[params.footer_sections]]
     title = "ScrapingBee"
     heading_level = 3
@@ -89,61 +64,3 @@ disableKinds = ["taxonomy", "term"]
       { text = "Contact", url = "/contact" },
       { text = "Privacy", url = "/privacy" }
     ]
-  
-  footer_copyright = "&copy; 2024 ScrapingBee. All rights reserved."
-  
-  # Additional CSS and JS files
-  additional_css = []
-  additional_scripts = []
-  
-  # Google Analytics
-  google_analytics = ""
-  
-  # Preload fonts
-  preload_fonts = ""
-  
-  # SEO
-  [params.seo]
-    googleSiteVerification = ""
-    bingSiteVerification = ""
-
-# Menu configuration
-[menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  
-  [[menu.main]]
-    name = "Scrapers"
-    url = "/scrapers/"
-    weight = 2
-  
-  [[menu.main]]
-    name = "Documentation"
-    url = "https://docs.scrapingbee.com"
-    weight = 3
-  
-  [[menu.main]]
-    name = "Pricing"
-    url = "https://scrapingbee.com/pricing"
-    weight = 4
-
-# Ignore deprecated warnings
-ignoreLogs = ['error-remote-getcsv']
-
-# Markup settings
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      # Enable unsafe HTML rendering for custom components
-      unsafe = true
-  [markup.highlight]
-    # Code highlighting
-    style = "github"
-    lineNos = true
-    lineNumbersInTable = true
-
-# Build settings
-[build]
-  writeStats = true 
