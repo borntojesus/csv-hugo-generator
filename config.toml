@@ -5,6 +5,8 @@ baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "ScrapingBee"
 description = "Web scraping made simple and reliable. Extract data from any website with our powerful API."
+author = "ScrapingBee"
+email = "contact@scrapingbee.com"
 
 [params]
   brand_name = "ScrapingBee"
@@ -123,6 +125,9 @@ description = "Web scraping made simple and reliable. Extract data from any webs
 
 # Ignore deprecated warnings
 ignoreLogs = ['error-remote-getcsv']
+
+# Disable RSS generation to avoid template errors
+disableRSS = true
 
 # Taxonomies
 [taxonomies]

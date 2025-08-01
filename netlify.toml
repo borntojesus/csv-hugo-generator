@@ -1,6 +1,6 @@
 [build]
-  # Hugo build command
-  command = "hugo --minify"
+  # Hugo build command - disable RSS to avoid template errors
+  command = "hugo --minify --disableRSS"
   
   # Directory where Hugo outputs the built site
   publish = "public"
