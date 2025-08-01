@@ -2,6 +2,11 @@ baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "ScrapingBee"
 
+# Favicon configuration
+[params]
+  favicon = "/favicon.svg"
+  author = "ScrapingBee"
+
 # Disable RSS and taxonomies to avoid build errors
 disableRSS = true
 disableKinds = ["taxonomy", "term"]

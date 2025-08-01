@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  
+  <!-- Bee body -->
+  <ellipse cx="16" cy="16" rx="8" ry="6" fill="#FFD700" stroke="#FF8C00" stroke-width="1"/>
+  
+  <!-- Bee stripes -->
+  <rect x="12" y="12" width="8" height="2" fill="#000" rx="1"/>
+  <rect x="12" y="16" width="8" height="2" fill="#000" rx="1"/>
+  <rect x="12" y="20" width="8" height="2" fill="#000" rx="1"/>
+  
+  <!-- Bee wings -->
+  <ellipse cx="10" cy="14" rx="3" ry="2" fill="#87CEEB" opacity="0.8"/>
+  <ellipse cx="22" cy="14" rx="3" ry="2" fill="#87CEEB" opacity="0.8"/>
+  <ellipse cx="10" cy="18" rx="3" ry="2" fill="#87CEEB" opacity="0.8"/>
+  <ellipse cx="22" cy="18" rx="3" ry="2" fill="#87CEEB" opacity="0.8"/>
+  
+  <!-- Bee antennae -->
+  <line x1="14" y1="10" x2="12" y2="8" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="18" y1="10" x2="20" y2="8" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Bee eyes -->
+  <circle cx="14" cy="14" r="1" fill="#000"/>
+  <circle cx="18" cy="14" r="1" fill="#000"/>
+  
+  <!-- Scraping symbol (data lines) -->
+  <line x1="6" y1="6" x2="8" y2="8" stroke="#FF4500" stroke-width="1" opacity="0.7"/>
+  <line x1="26" y1="26" x2="28" y2="28" stroke="#FF4500" stroke-width="1" opacity="0.7"/>
+  <line x1="6" y1="26" x2="8" y2="24" stroke="#FF4500" stroke-width="1" opacity="0.7"/>
+  <line x1="26" y1="6" x2="28" y2="8" stroke="#FF4500" stroke-width="1" opacity="0.7"/>
+</svg> 

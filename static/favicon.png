@@ -1,0 +1,5 @@
+# This is a placeholder for favicon.png
+# In a real environment, you would convert the SVG to PNG using tools like:
+# - Inkscape: inkscape favicon.svg --export-filename=favicon.png
+# - ImageMagick: convert favicon.svg favicon.png
+# - Online converters 
