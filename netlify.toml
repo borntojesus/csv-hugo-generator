@@ -1,57 +1,43 @@
 [build]
-  # Hugo build command - simple and reliable
   command = "hugo"
-  
-  # Directory where Hugo outputs the built site
   publish = "public"
 
 [build.environment]
-  # Hugo version - specify the version you want to use
   HUGO_VERSION = "0.120.0"
-  
-  # Environment variables for Hugo
   HUGO_ENV = "production"
 
-# Build settings for different contexts
 [context.production.environment]
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://your-domain.netlify.app"
 
 [context.deploy-preview.environment]
   HUGO_ENV = "staging"
-  HUGO_BASEURL = "https://deploy-preview-{id}--your-site.netlify.app"
+  HUGO_BASEURL = "https://deploy-preview-{id}--your-domain.netlify.app"
 
 [context.branch-deploy.environment]
   HUGO_ENV = "staging"
-  HUGO_BASEURL = "https://{branch}--your-site.netlify.app"
+  HUGO_BASEURL = "https://{branch}--your-domain.netlify.app"
 
-# Headers for security and performance
 [[headers]]
-  # Apply these headers to all pages
   for = "/*"
   [headers.values]
-    # Security headers
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    
-    # Performance headers
     Cache-Control = "public, max-age=3600"
 
 [[headers]]
-  # Cache static assets longer
   for = "/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  # Cache CSS and JS files
-  for = "*.css"
+  for = "/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "*.js"
+  for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable" 
+    Cache-Control = "public, max-age=31536000, immutable"
