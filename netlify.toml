@@ -1,39 +1,45 @@
 [build]
-  # Hugo build command with minification
+  # Hugo build command
   command = "hugo --minify"
   
   # Directory where Hugo outputs the built site
   publish = "public"
 
 [build.environment]
-  # Hugo version - using a stable recent version
+  # Hugo version - specify the version you want to use
   HUGO_VERSION = "0.120.0"
   
   # Environment variables for Hugo
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
-# Build settings for different deployment contexts
+# Build settings for different contexts
 [context.production.environment]
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://your-domain.netlify.app"
+  SITE_URL = "https://your-domain.netlify.app"
+  API_URL = "https://api.scrapingbee.com"
 
 [context.deploy-preview.environment]
   HUGO_ENV = "staging"
   HUGO_BASEURL = "https://deploy-preview-{id}--your-site.netlify.app"
+  SITE_URL = "https://deploy-preview-{id}--your-site.netlify.app"
+  API_URL = "https://api.scrapingbee.com"
 
 [context.branch-deploy.environment]
   HUGO_ENV = "staging"
   HUGO_BASEURL = "https://{branch}--your-site.netlify.app"
+  SITE_URL = "https://{branch}--your-site.netlify.app"
+  API_URL = "https://api.scrapingbee.com"
 
-# Redirects for better SEO and user experience
+# Redirects and rewrites
 [[redirects]]
   # Handle 404s gracefully
   from = "/*"
   to = "/404.html"
   status = 404
 
-# Security and performance headers
+# Headers for security and performance
 [[headers]]
   # Apply these headers to all pages
   for = "/*"
@@ -48,29 +54,28 @@
     Cache-Control = "public, max-age=3600"
 
 [[headers]]
-  # Cache static assets longer for better performance
+  # Cache static assets longer
   for = "/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  # Cache CSS files
+  # Cache CSS and JS files
   for = "*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  # Cache JS files
   for = "*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Environment variables for the site
-[context.production.environment]
-  # Add any environment variables your site needs
-  SITE_URL = "https://your-domain.netlify.app"
-  API_URL = "https://api.scrapingbee.com"
+# Functions (if you need serverless functions)
+[functions]
+  # Directory for Netlify functions
+  directory = "functions"
 
-[context.deploy-preview.environment]
-  SITE_URL = "https://deploy-preview-{id}--your-site.netlify.app"
-  API_URL = "https://api.scrapingbee.com" 
+# Edge functions (if using Netlify Edge Functions)
+[edge_functions]
+  # Directory for edge functions
+  directory = "edge-functions" 
