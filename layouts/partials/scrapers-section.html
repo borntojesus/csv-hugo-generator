@@ -1,0 +1,17 @@
+<!-- Popular Scrapers Section -->
+<section class="scrapers-section">
+    <div class="container">
+        <h2 class="section-heading">{{ .heading | default "Popular Scrapers" }}</h2>
+        <p class="section-intro">{{ .intro | default "Ready-to-use scrapers for the most popular platforms and websites." }}</p>
+        
+        <div class="scrapers-grid">
+            {{ range first 6 (where .Site.RegularPages "Type" "scrapers") }}
+            {{ partial "scraper-card.html" . }}
+            {{ end }}
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/scrapers" class="btn btn-primary">View All Scrapers</a>
+        </div>
+    </div>
+</section> 

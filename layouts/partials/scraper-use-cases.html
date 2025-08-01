@@ -1,0 +1,14 @@
+<div class="scraper-use-cases">
+    <h4>Use Cases:</h4>
+    <ul>
+        {{ if .Params.variables.use_case_1_heading }}
+        <li>{{ .Params.variables.use_case_1_heading }}</li>
+        {{ end }}
+        {{ if .Params.variables.use_case_2_heading }}
+        <li>{{ .Params.variables.use_case_2_heading }}</li>
+        {{ end }}
+        {{ if .Params.variables.use_case_3_heading }}
+        <li>{{ .Params.variables.use_case_3_heading }}</li>
+        {{ end }}
+    </ul>
+</div> 

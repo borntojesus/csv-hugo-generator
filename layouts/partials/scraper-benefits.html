@@ -1,0 +1,14 @@
+<div class="scraper-benefits">
+    <h4>Key Benefits:</h4>
+    <ul>
+        {{ if .Params.variables.benefit_1 }}
+        <li>{{ .Params.variables.benefit_1 }}</li>
+        {{ end }}
+        {{ if .Params.variables.benefit_2 }}
+        <li>{{ .Params.variables.benefit_2 }}</li>
+        {{ end }}
+        {{ if .Params.variables.benefit_3 }}
+        <li>{{ .Params.variables.benefit_3 }}</li>
+        {{ end }}
+    </ul>
+</div> 

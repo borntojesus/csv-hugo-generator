@@ -1,0 +1,44 @@
+{{ define "main" }}
+<!-- Hero Section -->
+{{ partial "scraper-hero.html" . }}
+
+<!-- Benefits Section -->
+{{ if or .Params.variables.benefit_1 .Params.variables.benefit_2 .Params.variables.benefit_3 }}
+<div style="margin: 4rem 0;">
+{{ partial "benefits-section.html" . }}
+</div>
+{{ end }}
+
+<!-- Use Cases Section -->
+{{ if or .Params.variables.use_case_heading .Params.variables.use_case_intro }}
+<div style="margin: 4rem 0;">
+{{ partial "use-cases-section.html" . }}
+</div>
+{{ end }}
+
+<!-- Features Section -->
+{{ if or .Params.variables.features_heading .Params.variables.features_intro }}
+<div style="margin: 4rem 0;">
+{{ partial "features-section.html" . }}
+</div>
+{{ end }}
+
+<!-- How It Works Section -->
+{{ if or .Params.variables.how_it_works_heading .Params.variables.how_it_works_intro }}
+<div style="margin: 4rem 0;">
+{{ partial "how-it-works-section.html" . }}
+</div>
+{{ end }}
+
+<!-- FAQ Section -->
+<!-- {{ if .Params.variables.faq_heading }}
+<div style="margin: 4rem 0;">
+{{ partial "faq-section.html" . }}
+</div>
+{{ end }} -->
+
+<!-- Content from markdown -->
+<div style="margin: 4rem 0;">
+{{ partial "content-section.html" . }}
+</div>
+{{ end }} 

@@ -1,0 +1,16 @@
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-heading">{{ .hero.heading | default "Web Scraping Made Simple" }}</h1>
+            <p class="hero-intro">{{ .hero.intro | default "Extract data from any website with our powerful web scraping API. Access real-time data, automate data collection, and scale your scraping projects without worrying about IP blocks or complex infrastructure." }}</p>
+            
+            <!-- CTA Buttons -->
+            <div class="hero-cta">
+                {{ range .hero.cta_buttons }}
+                <a href="{{ .url }}" class="btn btn-{{ .style | default "primary" }}">{{ .text }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section> 

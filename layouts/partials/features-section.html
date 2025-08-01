@@ -1,0 +1,20 @@
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-heading">{{ .Params.variables.features_heading }}</h2>
+        <p class="section-intro">{{ .Params.variables.features_intro }}</p>
+        
+        <div class="features-grid">
+            {{ range $i := seq 1 6 }}
+            {{ $heading := printf "feature_%d_heading" $i }}
+            {{ $description := printf "feature_%d_description" $i }}
+            {{ if and (index $.Params.variables $heading) (index $.Params.variables $description) }}
+            <div class="feature-item">
+                <h3>{{ index $.Params.variables $heading }}</h3>
+                <p>{{ index $.Params.variables $description }}</p>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section> 

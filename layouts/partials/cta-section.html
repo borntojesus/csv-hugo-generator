@@ -1,0 +1,14 @@
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>{{ .heading | default "Need a Custom Scraper?" }}</h2>
+            <p>{{ .description | default "Can't find what you're looking for? We can create custom scrapers for any website or platform." }}</p>
+            <div class="cta-actions">
+                {{ range .buttons }}
+                <a href="{{ .url }}" class="btn btn-{{ .style | default "primary" }}">{{ .text }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section> 

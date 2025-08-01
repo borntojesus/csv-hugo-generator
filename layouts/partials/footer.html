@@ -1,0 +1,25 @@
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            {{ range .Site.Params.footer_sections }}
+            <div class="footer-section">
+                <h{{ .heading_level | default 4 }}>{{ .title }}</h{{ .heading_level | default 4 }}>
+                {{ if .description }}
+                <p>{{ .description }}</p>
+                {{ end }}
+                {{ if .links }}
+                <ul>
+                    {{ range .links }}
+                    <li><a href="{{ .url }}">{{ .text }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <div class="footer-bottom">
+            <p>{{ .Site.Params.footer_copyright | default "&copy; 2024 ScrapingBee. All rights reserved." | safeHTML }}</p>
+        </div>
+    </div>
+</footer> 

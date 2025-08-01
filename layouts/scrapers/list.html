@@ -1,0 +1,18 @@
+{{ define "main" }}
+<!-- Page Header -->
+{{ partial "page-header.html" (dict "title" "All Scrapers" "description" "Browse our collection of powerful web scrapers designed for specific platforms and use cases.") }}
+
+<!-- Scrapers Grid -->
+<section class="scrapers-section">
+    <div class="container">
+        <div class="scrapers-grid">
+            {{ range where .Site.RegularPages "Type" "scrapers" }}
+            {{ partial "scraper-card.html" . }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+{{ partial "cta-section.html" (dict "heading" "Need a Custom Scraper?" "description" "Can't find what you're looking for? We can create custom scrapers for any website or platform." "buttons" (slice (dict "text" "Contact Us" "url" "/contact" "style" "primary") (dict "text" "View Documentation" "url" "/docs" "style" "secondary"))) }}
+{{ end }} 

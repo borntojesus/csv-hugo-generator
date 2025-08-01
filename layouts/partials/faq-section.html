@@ -1,0 +1,21 @@
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-heading">{{ .Params.variables.faq_heading }}</h2>
+        
+        <div class="faq-list">
+            {{ range $i := seq 1 6 }}
+            {{ $question := printf "faq_%d_question" $i }}
+            {{ $answer := printf "faq_%d_answer" $i }}
+            {{ if and (index $.Params.variables $question) (index $.Params.variables $answer) }}
+            <div class="faq-item">
+                <h3 class="faq-question">{{ index $.Params.variables $question }}</h3>
+                <div class="faq-answer">
+                    <p>{{ index $.Params.variables $answer }}</p>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section> 

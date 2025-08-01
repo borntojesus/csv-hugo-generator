@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Meta Tags -->
+    <title>{{ .Title | default .Site.Title }}</title>
+    <meta name="description" content="{{ .Params.description | default .Summary | default .Site.Params.description }}">
+    
+    <!-- Additional meta tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="{{ .Site.Params.author | default "ScrapingBee" }}">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="{{ .Title | default .Site.Title }}">
+    <meta property="og:description" content="{{ .Params.description | default .Summary | default .Site.Params.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ if .Params.og_image }}
+    <meta property="og:image" content="{{ .Params.og_image }}">
+    {{ end }}
+    
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Title | default .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Params.description | default .Summary | default .Site.Params.description }}">
+    {{ if .Params.twitter_image }}
+    <meta name="twitter:image" content="{{ .Params.twitter_image }}">
+    {{ end }}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    <!-- Favicon -->
+    {{ if .Site.Params.favicon }}
+    <link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon }}">
+    {{ end }}
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Additional CSS -->
+    {{ range .Site.Params.additional_css }}
+    <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+    
+    <!-- Preload critical resources -->
+    {{ if .Site.Params.preload_fonts }}
+    <link rel="preload" href="{{ .Site.Params.preload_fonts }}" as="font" type="font/woff2" crossorigin>
+    {{ end }}
+</head> 

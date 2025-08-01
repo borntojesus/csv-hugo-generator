@@ -1,0 +1,9 @@
+{{ define "main" }}
+<!-- Hero Section -->
+{{ partial "hero.html" (dict "hero" .Site.Params.hero) }}
+
+<!-- Popular Scrapers Section -->
+<div style="margin: 4rem 0;">
+{{ partial "scrapers-section.html" (dict "heading" .Site.Params.scrapers_section.heading "intro" .Site.Params.scrapers_section.intro "Site" .Site) }}
+</div>
+{{ end }} 
