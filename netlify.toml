@@ -1,6 +1,6 @@
 [build]
-  # Hugo build command - disable RSS to avoid template errors
-  command = "hugo --minify --disableRSS"
+  # Hugo build command - simple and reliable
+  command = "hugo"
   
   # Directory where Hugo outputs the built site
   publish = "public"
@@ -11,33 +11,19 @@
   
   # Environment variables for Hugo
   HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
 
 # Build settings for different contexts
 [context.production.environment]
   HUGO_ENV = "production"
   HUGO_BASEURL = "https://your-domain.netlify.app"
-  SITE_URL = "https://your-domain.netlify.app"
-  API_URL = "https://api.scrapingbee.com"
 
 [context.deploy-preview.environment]
   HUGO_ENV = "staging"
   HUGO_BASEURL = "https://deploy-preview-{id}--your-site.netlify.app"
-  SITE_URL = "https://deploy-preview-{id}--your-site.netlify.app"
-  API_URL = "https://api.scrapingbee.com"
 
 [context.branch-deploy.environment]
   HUGO_ENV = "staging"
   HUGO_BASEURL = "https://{branch}--your-site.netlify.app"
-  SITE_URL = "https://{branch}--your-site.netlify.app"
-  API_URL = "https://api.scrapingbee.com"
-
-# Redirects and rewrites
-[[redirects]]
-  # Handle 404s gracefully
-  from = "/*"
-  to = "/404.html"
-  status = 404
 
 # Headers for security and performance
 [[headers]]

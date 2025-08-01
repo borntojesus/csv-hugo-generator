@@ -1,5 +1,5 @@
 # Hugo Configuration for ScrapingBee Landing Pages
-# This configuration sets up the site structure and theme settings
+# Minimal configuration to avoid build issues
 
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
@@ -7,6 +7,12 @@ title = "ScrapingBee"
 description = "Web scraping made simple and reliable. Extract data from any website with our powerful API."
 author = "ScrapingBee"
 email = "contact@scrapingbee.com"
+
+# Disable RSS generation to avoid template errors
+disableRSS = true
+
+# Disable taxonomy generation to avoid template issues
+disableKinds = ["taxonomy", "term"]
 
 [params]
   brand_name = "ScrapingBee"
@@ -126,42 +132,6 @@ email = "contact@scrapingbee.com"
 # Ignore deprecated warnings
 ignoreLogs = ['error-remote-getcsv']
 
-# Disable RSS generation to avoid template errors
-disableRSS = true
-
-# Taxonomies
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  scraper_type = "scraper_types"
-
-# Content organization
-[content]
-  # Default content type
-  [content.scrapers]
-    # Scraper content type configuration
-    [content.scrapers.params]
-      showToc = true
-      showBreadcrumb = true
-      showShare = true
-      showReadingTime = false
-
-# Build settings
-[build]
-  writeStats = true
-
-# Server settings
-[server]
-  # Development server configuration
-  [server.headers]
-    # Security headers
-    for = "/*"
-    [server.headers.values]
-      X-Frame-Options = "DENY"
-      X-Content-Type-Options = "nosniff"
-      X-XSS-Protection = "1; mode=block"
-      Referrer-Policy = "strict-origin-when-cross-origin"
-
 # Markup settings
 [markup]
   [markup.goldmark]
@@ -174,35 +144,6 @@ disableRSS = true
     lineNos = true
     lineNumbersInTable = true
 
-  # Data processing - will be set dynamically in templates
-  csv_files = ["*.csv"]
-
-# Privacy settings
-[privacy]
-  [privacy.vimeo]
-    disabled = false
-    simple = false
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = false
-  [privacy.instagram]
-    disabled = false
-    simple = false
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
-# Security settings
-[security]
-  [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
-    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
-  [security.funcs]
-    getenv = ['^HUGO_']
-  [security.http]
-    methods = ['(?i)GET|POST|HEAD']
-    schemes = ['(?i)HTTP|HTTPS']
-  [security.files]
-    dirs = ['(?i)^(archetypes|assets|content|data|layouts|static)$']
-    mounts = ['(?i)^(assets|content|layouts|static)$'] 
+# Build settings
+[build]
+  writeStats = true 
