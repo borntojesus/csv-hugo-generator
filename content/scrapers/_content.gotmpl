@@ -1,0 +1,25 @@
+{{ $items := index site.Data "gen-posts" "scrapers" }}
+
+{{/* Add section root */}}
+{{ .AddPage (dict
+  "kind"    "section"
+  "path"    "."
+  "title"   "Scraper APIs"
+) }}
+
+{{/* Generate pages for each scraper */}}
+{{ range $items }}
+  {{ $.AddPage (dict
+    "kind"    "page"
+    "path"    (printf "%s" .slug)
+    "title"   .title
+    "params"  (dict
+      "description"     .description
+      "hero_heading"    .hero_heading
+      "hero_intro"      .hero_intro
+      "benefits"        .benefits
+      "api_section"     .api_section
+      "results_section" .results_section
+    )
+  ) }}
+{{ end }} 

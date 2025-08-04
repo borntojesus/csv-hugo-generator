@@ -1,44 +1,69 @@
 {{ define "main" }}
-<!-- Hero Section -->
-{{ partial "scraper-hero.html" . }}
-
-<!-- Benefits Section -->
-{{ if or .Params.variables.benefit_1 .Params.variables.benefit_2 .Params.variables.benefit_3 }}
-<div style="margin: 4rem 0;">
-{{ partial "benefits-section.html" . }}
+<div style="text-align: center; margin-bottom: 40px;">
+    <h1>{{ .Params.hero_heading | default .Title }}</h1>
+    <p style="font-size: 1.2em; color: #666;">{{ .Params.hero_intro | default .Description }}</p>
 </div>
+
+{{ if .Params.benefits }}
+<section style="margin: 40px 0;">
+    <h2>Key Benefits</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        {{ range .Params.benefits }}
+        <div style="background: #e8f4f8; padding: 20px; border-radius: 8px; text-align: center;">
+            <p>{{ . }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
 {{ end }}
 
-<!-- Use Cases Section -->
-{{ if or .Params.variables.use_case_heading .Params.variables.use_case_intro }}
-<div style="margin: 4rem 0;">
-{{ partial "use-cases-section.html" . }}
-</div>
+{{ if .Params.api_section }}
+<section style="margin: 40px 0; padding: 40px; background: #f8f9fa; border-radius: 8px;">
+    <h2>{{ .Params.api_section.title }}</h2>
+    <p>{{ .Params.api_section.description }}</p>
+    
+    {{ if .Params.api_section.features }}
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
+        {{ range .Params.api_section.features }}
+        <div style="text-align: center;">
+            {{ if .icon }}
+            <img src="{{ .icon | relURL }}" alt="{{ .title }}" style="width: 60px; height: 60px; margin-bottom: 15px;">
+            {{ end }}
+            <h3>{{ .title | safeHTML }}</h3>
+            <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
 {{ end }}
 
-<!-- Features Section -->
-{{ if or .Params.variables.features_heading .Params.variables.features_intro }}
-<div style="margin: 4rem 0;">
-{{ partial "features-section.html" . }}
-</div>
+{{ if .Params.results_section }}
+<section style="margin: 40px 0; text-align: center; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px;">
+    <h2>{{ .Params.results_section.title }}</h2>
+    <p style="font-size: 1.1em; margin-bottom: 30px;">{{ .Params.results_section.description }}</p>
+    
+    {{ if .Params.results_section.buttons }}
+    <div>
+        {{ if .Params.results_section.buttons.api_key.enable }}
+        <a href="{{ .Params.results_section.buttons.api_key.link }}" target="_blank" 
+           style="background: #28a745; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; display: inline-block; margin: 0 10px; font-weight: bold;">
+           {{ .Params.results_section.buttons.api_key.label }}
+        </a>
+        {{ end }}
+        
+        {{ if .Params.results_section.buttons.documentation.enable }}
+        <a href="{{ .Params.results_section.buttons.documentation.link }}" target="_blank" 
+           style="background: transparent; color: white; border: 2px solid white; padding: 13px 28px; border-radius: 5px; text-decoration: none; display: inline-block; margin: 0 10px; font-weight: bold;">
+           {{ .Params.results_section.buttons.documentation.label }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
 {{ end }}
 
-<!-- How It Works Section -->
-{{ if or .Params.variables.how_it_works_heading .Params.variables.how_it_works_intro }}
-<div style="margin: 4rem 0;">
-{{ partial "how-it-works-section.html" . }}
+<div style="text-align: center; margin: 40px 0;">
+    <a href="{{ "/scrapers/" | relURL }}" style="color: #0066cc; text-decoration: none;">&larr; Back to All Scrapers</a>
 </div>
 {{ end }}
-
-<!-- FAQ Section -->
-<!-- {{ if .Params.variables.faq_heading }}
-<div style="margin: 4rem 0;">
-{{ partial "faq-section.html" . }}
-</div>
-{{ end }} -->
-
-<!-- Content from markdown -->
-<div style="margin: 4rem 0;">
-{{ partial "content-section.html" . }}
-</div>
-{{ end }} 

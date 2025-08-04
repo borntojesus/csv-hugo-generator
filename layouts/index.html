@@ -1,9 +1,34 @@
 {{ define "main" }}
-<!-- Hero Section -->
-{{ partial "hero.html" (dict "hero" .Site.Params.hero) }}
+<h2>ScrapingBee API Collection</h2>
+<p>Explore our powerful web scraping APIs designed to help you extract data from any website with ease.</p>
 
-<!-- Popular Scrapers Section -->
-<div style="margin: 4rem 0;">
-{{ partial "scrapers-section.html" (dict "heading" .Site.Params.scrapers_section.heading "intro" .Site.Params.scrapers_section.intro "Site" .Site) }}
+{{ $scrapers := index site.Data "gen-posts" "scrapers" }}
+
+<div class="scraper-grid">
+    {{ range $scrapers }}
+    <div class="scraper-card">
+        <h3><a href="{{ printf "/scrapers/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+        <p><strong>{{ .hero_heading }}</strong></p>
+        <p>{{ .description }}</p>
+        
+        {{ if .benefits }}
+        <h4>Key Benefits:</h4>
+        <ul class="benefits">
+            {{ range .benefits }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        
+        <p><a href="{{ printf "/scrapers/%s/" .slug | relURL }}" style="background: #0066cc; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More →</a></p>
+    </div>
+    {{ end }}
 </div>
-{{ end }} 
+
+<div style="text-align: center; margin: 40px 0; padding: 20px; background: #f0f8ff; border-radius: 8px;">
+    <h3>Ready to Start Scraping?</h3>
+    <p>Get your API key and start extracting data in minutes.</p>
+    <a href="https://app.scrapingbee.com/account/register" target="_blank" style="background: #28a745; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 10px;">Get API Key</a>
+    <a href="https://www.scrapingbee.com/documentation/" target="_blank" style="background: #6c757d; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 10px;">View Documentation</a>
+</div>
+{{ end }}

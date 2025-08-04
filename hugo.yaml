@@ -1,0 +1,40 @@
+baseURL: 'http://localhost:1313/'
+languageCode: en-us
+title: ScrapingBee Hugo Site
+
+# Enable content adapters
+contentAdapter:
+  enabled: true
+
+# Build settings
+build:
+  writeStats: true
+
+# Server settings
+server:
+  port: 1313
+  bind: 0.0.0.0
+
+# Theme settings (if needed)
+# theme: my-theme
+
+# Content settings
+contentDir: content
+dataDir: data
+layoutDir: layouts
+staticDir: static
+
+# Output settings
+outputs:
+  home:
+    - HTML
+    - RSS
+  section:
+    - HTML
+    - RSS
+  taxonomy:
+    - HTML
+    - RSS
+  term:
+    - HTML
+    - RSS 

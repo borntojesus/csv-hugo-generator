@@ -1,18 +1,27 @@
 {{ define "main" }}
-<!-- Page Header -->
-{{ partial "page-header.html" (dict "title" "All Scrapers" "description" "Browse our collection of powerful web scrapers designed for specific platforms and use cases.") }}
+<h2>{{ .Title }}</h2>
+<p>Browse all available scraper APIs:</p>
 
-<!-- Scrapers Grid -->
-<section class="scrapers-section">
-    <div class="container">
-        <div class="scrapers-grid">
-            {{ range where .Site.RegularPages "Type" "scrapers" }}
-            {{ partial "scraper-card.html" . }}
+{{ $scrapers := index site.Data "gen-posts" "scrapers" }}
+
+<div class="scraper-grid">
+    {{ range $scrapers }}
+    <div class="scraper-card">
+        <h3><a href="{{ printf "/scrapers/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+        <p><strong>{{ .hero_heading }}</strong></p>
+        <p>{{ .description }}</p>
+        
+        {{ if .benefits }}
+        <h4>Key Benefits:</h4>
+        <ul class="benefits">
+            {{ range .benefits }}
+            <li>{{ . }}</li>
             {{ end }}
-        </div>
+        </ul>
+        {{ end }}
+        
+        <p><a href="{{ printf "/scrapers/%s/" .slug | relURL }}" style="background: #0066cc; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More →</a></p>
     </div>
-</section>
-
-<!-- CTA Section -->
-{{ partial "cta-section.html" (dict "heading" "Need a Custom Scraper?" "description" "Can't find what you're looking for? We can create custom scrapers for any website or platform." "buttons" (slice (dict "text" "Contact Us" "url" "/contact" "style" "primary") (dict "text" "View Documentation" "url" "/docs" "style" "secondary"))) }}
-{{ end }} 
+    {{ end }}
+</div>
+{{ end }}

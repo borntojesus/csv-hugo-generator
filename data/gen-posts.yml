@@ -1,0 +1,386 @@
+scrapers:
+  - slug: scrapingbee
+    title: Google Shopping Scraper API | ScrapingBee
+    description: Scrape Amazon product data worldwide with our powerful web scraping API. Get prices, reviews, and rankings from any Amazon domain - all with a single API call.
+    hero_heading: Google Shopping Scraper API
+    hero_intro: Scrape Google Shopping results, allowing you to transform it into a competitive advantage. Real-time pricing data, product tracking, global market coverage — all with a single API call.
+    benefits:
+      - Scrape Amazon product data in detail from all regional domains. Simultaneously.
+      - Extract everything from prices to reviews to delivery details. Receive clean JSON.
+      - Try our Amazon Scraper to quickly start scraping Amazon Data.
+    api_section:
+      title: Our Google Shopping Scraper API
+      description: Scrape Google Shopping results, allowing you to transform it into a competitive advantage. Real-time pricing data, product tracking, global market coverage — all with a single API call.
+      image: /images/landing/scrapingbee-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Shopping Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Shopping Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Shopping Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google-maps-scraper
+    title: Google Shopping Scraper API | ScrapingBee
+    description: Scrape Google Shopping results, allowing you to transform it into a competitive advantage. Real-time pricing data, product tracking, global market coverage — all with a single API call.
+    hero_heading: Google Shopping Scraper API
+    hero_intro: Scrape Google Shopping results, allowing you to transform it into a competitive advantage. Real-time pricing data, product tracking, global market coverage — all with a single API call.
+    benefits:
+      - Enables you to monitor any product across every market. In real-time.
+      - From prices to reviews to seller ratings - every data point you need.
+      - Try our Google Shopping Scraper to quickly start scraping Google Shopping Data. Receive clean, structured JSON.
+    api_section:
+      title: Our Google Shopping Scraper API
+      description: Scrape Google Shopping results, allowing you to transform it into a competitive advantage. Real-time pricing data, product tracking, global market coverage — all with a single API call.
+      image: /images/landing/google-maps-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Shopping Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Shopping Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Shopping Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: ebay-scraper
+    title: Home Depot Scraper API | ScrapingBee
+    description: Access Home Depot's vast product catalog with our powerful web scraping API. Get prices, specifications, and availability across product categories with unmatched reliability.
+    hero_heading: Home Depot Scraper API
+    hero_intro: Access Home Depot's vast product catalog with our powerful web scraping API. Get prices, specifications, and availability across product categories with unmatched reliability.
+    benefits:
+      - Gather detailed product data from America's largest home improvement retailer. At scale.
+      - Extract everything from prices to model numbers to reviews with exceptional accuracy.
+      - Try our Home Depot Scraper to quickly start scraping Home Depot Data. Receive clean, structured JSON.
+    api_section:
+      title: Our Home Depot Scraper API
+      description: Access Home Depot's vast product catalog with our powerful web scraping API. Get prices, specifications, and availability across product categories with unmatched reliability.
+      image: /images/landing/ebay-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Home Depot Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Home Depot Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Home Depot Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google-scholar-scraper
+    title: Google Maps Scraper - Easy Use & Free Credits Signup
+    description: Extract structured data from Google Maps effortlessly with our scraper. Automate data collection and access real-time information with a single API call.
+    hero_heading: Google Maps Scraper API
+    hero_intro: Extract Google Maps data effortlessly with our robust API. Access real-time location details, business info, and user reviews. Streamline your development process and enhance your applications with precise data, all in one seamless API call.
+    benefits:
+      - Save hours on data integration
+      - Automate tedious data tasks
+      - Boost app efficiency instantly
+    api_section:
+      title: Our Google Maps Scraper API
+      description: Extract Google Maps data effortlessly with our robust API. Access real-time location details, business info, and user reviews. Streamline your development process and enhance your applications with precise data, all in one seamless API call.
+      image: /images/landing/google-scholar-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Maps Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Maps Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Maps Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google-finance-scraper
+    title: eBay Scraper Tool - Free Credits on Signup
+    description: Extract eBay data effortlessly with our eBay scraper. Access real-time pricing, product details, and more with a single API call. Automate your data collection.
+    hero_heading: eBay Scraper API
+    hero_intro: Extract eBay data effortlessly with our eBay scraper API. Access real-time pricing, product details, and seller info. Streamline your workflow and gain insights with a single API call. Perfect for developer teams seeking efficiency and precision. Start scraping eBay today.
+    benefits:
+      - Save hours on data extraction
+      - Automate tedious data tasks
+      - Boost productivity instantly
+    api_section:
+      title: Our eBay Scraper API
+      description: Extract eBay data effortlessly with our eBay scraper API. Access real-time pricing, product details, and seller info. Streamline your workflow and gain insights with a single API call. Perfect for developer teams seeking efficiency and precision. Start scraping eBay today.
+      image: /images/landing/google-finance-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use eBay Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in eBay Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From eBay Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google-flights-scraper
+    title: Google Hotels Scraper - Simple Tool, Free Signup Credits
+    description: Scrape Google Hotels data effortlessly with our API. Access real-time pricing, availability, and reviews. Automate your data collection with ease.
+    hero_heading: Google Hotels Scraper API
+    hero_intro: Scrape Google hotel data effortlessly. Access real-time pricing, availability, and reviews with a single API call. Empower your team with precise insights and stay ahead in the market.
+    benefits:
+      - Streamline coding tasks
+      - Boost coding efficiency
+      - Save hours on manual data collection
+    api_section:
+      title: Our Google Hotels Scraper API
+      description: Scrape Google hotel data effortlessly. Access real-time pricing, availability, and reviews with a single API call. Empower your team with precise insights and stay ahead in the market.
+      image: /images/landing/google-flights-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Hotels Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Hotels Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Hotels Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google-image-scraper
+    title: Google Scholar Scraper - Free Signup Credits & Easy Use
+    description: Effortlessly extract data from Google Scholar with our scraper. Automate research, gather citations, and access structured information with ease.
+    hero_heading: Google Scholar Scraper API
+    hero_intro: Effortlessly scrape Google Scholar data with our robust API. Access citations, authors, and publication details in real-time. Streamline your research process and gain insights with precision. Perfect for developer teams seeking efficient data extraction.
+    benefits:
+      - Save time with instant data access
+      - Boost productivity with seamless integration
+      - Automate tasks, focus on coding
+    api_section:
+      title: Our Google Scholar Scraper API
+      description: Effortlessly scrape Google Scholar data with our robust API. Access citations, authors, and publication details in real-time. Streamline your research process and gain insights with precision. Perfect for developer teams seeking efficient data extraction.
+      image: /images/landing/google-image-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Scholar Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Scholar Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Scholar Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google-trends-scraper
+    title: Google Finance Scraper - Free Signup Credits, Simple Use
+    description: Effortlessly extract Google Finance data with our scraper. Access real-time financial information and automate data collection with a single API call.
+    hero_heading: Google Finance Scraper API
+    hero_intro: Extract Google Finance data effortlessly with our API. Access real-time stock prices, financial news, and market trends. Streamline your workflow and make informed decisions with precise data at your fingertips. Start optimizing your financial insights today.
+    benefits:
+      - Save coding time
+      - Automate data tasks instantly
+      - Boost productivity with zero hassle
+    api_section:
+      title: Our Google Finance Scraper API
+      description: Extract Google Finance data effortlessly with our API. Access real-time stock prices, financial news, and market trends. Streamline your workflow and make informed decisions with precise data at your fingertips. Start optimizing your financial insights today.
+      image: /images/landing/google-trends-scraper-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Finance Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Finance Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Finance Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: google
+    title: Google Flights Scraper - Free Signup Credits, Simple Use
+    description: Scrape Google Flights data effortlessly with our API. Access real-time flight information, pricing, and availability. Automate your data collection seamlessly.
+    hero_heading: Google Flights Scraper API
+    hero_intro: Scrape Google Flights data effortlessly. Access real-time flight prices, schedules, and availability with a single API call. Empower your team with precise data for better decision-making and competitive insights. Start transforming your travel data strategy today.
+    benefits:
+      - Streamline coding with instant flight data
+      - Code faster with live flight updates
+      - Boost productivity with seamless integration
+    api_section:
+      title: Our Google Flights Scraper API
+      description: Scrape Google Flights data effortlessly. Access real-time flight prices, schedules, and availability with a single API call. Empower your team with precise data for better decision-making and competitive insights. Start transforming your travel data strategy today.
+      image: /images/landing/google-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Flights Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Flights Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Flights Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: image
+    title: Google Image Scraper - Free Credits, Simple Signup
+    description: Scrape Google Images effortlessly with our Google image scraper. Access structured data and automate your projects with a simple API call.
+    hero_heading: Google Image Scraper API
+    hero_intro: Extract Google image data effortlessly with our API. Access real-time visuals, metadata, and trends. Enhance your projects with precise image insights. One API call, endless possibilities for your development team.
+    benefits:
+      - Streamline image data integration
+      - Simplify image data tasks
+      - Save hours on manual image data tasks
+    api_section:
+      title: Our Google Image Scraper API
+      description: Extract Google image data effortlessly with our API. Access real-time visuals, metadata, and trends. Enhance your projects with precise image insights. One API call, endless possibilities for your development team.
+      image: /images/landing/image-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Image Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Image Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Image Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
+  - slug: trands
+    title: Google Trends Scraper - Free Credits, Simple Signup
+    description: Scrape Google Trends data effortlessly with our API. Access real-time insights and automate data collection without IP blocks. Transform data into actionable insights.
+    hero_heading: Google Trends Scraper API
+    hero_intro: Extract Google Trends data effortlessly with our API. Gain insights, track trends, and stay ahead in the market. Access real-time data and make informed decisions with ease. Perfect for developer teams seeking a competitive edge. Start leveraging data today.
+    benefits:
+      - Save hours on data analysis
+      - Automate trend tracking
+      - Boost project efficiency
+    api_section:
+      title: Our Google Trends Scraper API
+      description: Extract Google Trends data effortlessly with our API. Gain insights, track trends, and stay ahead in the market. Access real-time data and make informed decisions with ease. Perfect for developer teams seeking a competitive edge. Start leveraging data today.
+      image: /images/landing/trands-screenshot.png
+      features:
+        - title: Never **Lose on Price**
+          description: Use Google Trends Scraper API price scrape insights to track competitor price changes, refine your strategy, and win more customers.
+          icon: /images/landing/prices.png
+        - title: Dominate **Search Results**
+          description: Track your product rankings in Google Trends Scraper API search results in real-time. Analyze and understand what moves the needle.
+          icon: /images/landing/ranking.png
+        - title: Turn **Reviews into Revenue**
+          description: Monitor customer sentiment across the market. Identify opportunities. Outperform the competition.
+          icon: /images/landing/scores.png
+    results_section:
+      title: From API Call to Actionable Data. Collect Data From Google Trends Scraper API In Seconds
+      description: Start gathering competitive intelligence today. No complex setups. No learning curves. Run our ready-to-use code now.
+      buttons:
+        api_key:
+          enable: true
+          label: Get your API Key
+          link: https://app.scrapingbee.com/account/register
+        documentation:
+          enable: true
+          label: Explore the documentation
+          link: https://www.scrapingbee.com/documentation/
