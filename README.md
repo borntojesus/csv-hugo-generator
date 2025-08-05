@@ -2,6 +2,12 @@
 
 A Hugo static site that dynamically generates web development service pages from CSV data using Hugo's content adapters.
 
+## 🔗 Quick Links
+
+- **🌐 [Live Demo](https://csv-hugo-generator.netlify.app/)** - See the generator in action
+- **📁 [GitHub Repository](https://github.com/borntojesus/csv-hugo-generator)** - Source code and documentation
+- **🚀 [Hugo Development Services](https://alpina-tech.com/gohugo-development/)** - Professional Hugo development
+
 ## 🚀 Features
 
 - **CSV-Driven Content**: Automatically generate service pages from CSV data
