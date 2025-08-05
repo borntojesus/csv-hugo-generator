@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle with gradient similar to Alpina Tech's blue theme -->
+  <circle cx="16" cy="16" r="15" fill="#0066cc" stroke="#004499" stroke-width="1"/>
+  
+  <!-- CSV representation (three horizontal lines) -->
+  <rect x="6" y="9" width="8" height="1.5" fill="white" rx="0.5"/>
+  <rect x="6" y="12" width="8" height="1.5" fill="white" rx="0.5"/>
+  <rect x="6" y="15" width="8" height="1.5" fill="white" rx="0.5"/>
+  
+  <!-- Arrow representing conversion -->
+  <path d="M16 11 L20 15 L16 19" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Hugo "H" symbol -->
+  <text x="23" y="19" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">H</text>
+</svg>

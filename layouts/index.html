@@ -1,13 +1,13 @@
 {{ define "main" }}
-<h2>ScrapingBee API Collection</h2>
-<p>Explore our powerful web scraping APIs designed to help you extract data from any website with ease.</p>
+<h2>CSV to Hugo Pages Collection</h2>
+<p>A powerful Hugo site generator that creates service pages dynamically from CSV data using Hugo's content adapters.</p>
 
 <!-- Navigation to Scrapers Section -->
 <div style="text-align: center; margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #0066cc;">
-    <h3>🚀 Available Web Scraping APIs</h3>
-    <p>Browse our complete collection of specialized scraping tools</p>
+    <h3>🚀 Generated Service Pages</h3>
+    <p>Browse our complete collection of generated service pages</p>
     <a href="{{ "/scrapers/" | relURL }}" style="background: #0066cc; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; font-weight: bold;">
-        View All Scrapers →
+        View All Services →
     </a>
 </div>
 
@@ -18,10 +18,10 @@
     <h3>🔗 Quick Links</h3>
     <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
         <a href="{{ "/scrapers/" | relURL }}" style="background: #17a2b8; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
-            📋 All Scrapers
+            📋 All Services
         </a>
         <a href="{{ "/scrapers/scrapingbee/" | relURL }}" style="background: #6f42c1; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
-            🛒 Google Shopping
+            🛒 Sample Service
         </a>
         <a href="{{ "/scrapers/google-maps-scraper/" | relURL }}" style="background: #e83e8c; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
             🗺️ Google Maps
@@ -34,7 +34,7 @@
 
 <!-- How-To Manual Section -->
 <div style="margin: 50px 0; padding: 30px; background: #fff3cd; border-radius: 8px; border-left: 5px solid #ffc107;">
-    <h3>📚 How to Add New Scrapers (Developer Guide)</h3>
+    <h3>📚 How to Add New Service Pages (Developer Guide)</h3>
     <p style="margin-bottom: 20px; color: #856404;"><strong>This site uses Hugo Content Adapters to automatically generate pages from CSV data!</strong></p>
     
     <div style="background: white; padding: 20px; border-radius: 6px; margin: 20px 0;">
@@ -92,24 +92,27 @@
     <div style="background: #d4edda; padding: 15px; border-radius: 6px; border: 1px solid #c3e6cb;">
         <h4 style="color: #155724; margin-top: 0;">💡 Example CSV Row:</h4>
         <code style="display: block; background: white; padding: 10px; border-radius: 4px; font-size: 0.9em; word-break: break-all;">
-            "youtube-scraper","YouTube Data Scraper | ScrapingBee","Extract YouTube video data, comments, and metadata with our powerful API","YouTube Data Scraper","Get comprehensive YouTube data including videos, playlists, comments, and channel information","Extract video metadata and statistics","Get comments and engagement data","Monitor trending content and analytics"
+            "youtube-scraper","YouTube Data Service | CSV Hugo Generator","Extract YouTube video data, comments, and metadata with our powerful API","YouTube Data Scraper","Get comprehensive YouTube data including videos, playlists, comments, and channel information","Extract video metadata and statistics","Get comments and engagement data","Monitor trending content and analytics"
         </code>
     </div>
 
     <div style="text-align: center; margin-top: 25px;">
-        <a href="https://github.com/borntojesus/scrapingbee-hugo" target="_blank" style="background: #6c757d; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 5px;">
+        <a href="https://github.com/csv-hugo-generator" target="_blank" style="background: #6c757d; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 5px;">
             📂 View Source Code
         </a>
         <a href="https://gohugo.io/content-management/content-adapters/" target="_blank" style="background: #0066cc; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 5px;">
             📖 Hugo Content Adapters Docs
         </a>
+        <a href="https://alpina-tech.com/gohugo-development/" target="_blank" style="background: #28a745; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 5px;">
+            🚀 Hugo Development Services
+        </a>
     </div>
 </div>
 
 <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f0f8ff; border-radius: 8px;">
-    <h3>Ready to Start Scraping?</h3>
-    <p>Get your API key and start extracting data in minutes.</p>
-    <a href="https://app.scrapingbee.com/account/register" target="_blank" style="background: #28a745; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 10px;">Get API Key</a>
-    <a href="https://www.scrapingbee.com/documentation/" target="_blank" style="background: #6c757d; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 10px;">View Documentation</a>
+    <h3>Ready to Generate Pages?</h3>
+    <p>Get started with CSV-driven page generation in minutes.</p>
+    <a href="https://gohugo.io/getting-started/" target="_blank" style="background: #28a745; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 10px;">View Demo</a>
+    <a href="https://gohugo.io/documentation/" target="_blank" style="background: #6c757d; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 10px;">Hugo Docs</a>
 </div>
 {{ end }}

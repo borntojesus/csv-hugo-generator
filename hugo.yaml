@@ -1,6 +1,6 @@
 baseURL: 'http://localhost:1313/'
 languageCode: en-us
-title: ScrapingBee Hugo Site
+title: CSV to Hugo Programmatic Pages Generator
 
 # Enable content adapters
 contentAdapter:
