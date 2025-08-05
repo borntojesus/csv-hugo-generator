@@ -8,25 +8,17 @@
       "h1",
       "h2",
       "h3",
-      "h4",
       "head",
       "header",
       "html",
-      "img",
-      "li",
       "main",
       "meta",
       "p",
-      "script",
       "section",
-      "strong",
       "style",
-      "title",
-      "ul"
+      "title"
     ],
     "classes": [
-      "benefits",
-      "scraper-card",
       "scraper-grid"
     ],
     "ids": null
