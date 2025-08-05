@@ -17,39 +17,21 @@
 {{/* Generate pages for each scraper from CSV data */}}
 {{ range $index, $row := after 1 $data }}
   {{/* Map CSV columns to variables */}}
-  {{ $page_name := index $row 0 }}
-  {{ $slug := index $row 1 }}
-  {{ $title := index $row 2 }}
-  {{ $meta_description := index $row 3 }}
-  {{ $hero_heading := index $row 4 }}
-  {{ $hero_intro := index $row 5 }}
-  {{ $benefit1 := index $row 6 }}
-  {{ $benefit2 := index $row 7 }}
-  {{ $benefit3 := index $row 8 }}
+  {{ $slug := index $row 0 }}
+  {{ $title := index $row 1 }}
+  {{ $meta_description := index $row 2 }}
+  {{ $hero_heading := index $row 3 }}
+  {{ $hero_intro := index $row 4 }}
+  {{ $benefit1 := index $row 5 }}
+  {{ $benefit2 := index $row 6 }}
+  {{ $benefit3 := index $row 7 }}
   
   {{/* Create benefits array and other sections to match the existing template */}}
   {{ $benefits := slice $benefit1 $benefit2 $benefit3 }}
   
   {{ $api_section := dict
-    "title" (printf "%s API Features" $page_name)
-    "description" (printf "Our %s API provides comprehensive functionality for all your scraping needs." $page_name)
-  }}
-  
-  {{ $results_section := dict
-    "title" (printf "Start Using %s Today" $page_name)
-    "description" "Get started with our powerful API in minutes. Free trial available!"
-    "buttons" (dict
-      "api_key" (dict
-        "enable" true
-        "label" "Get Free API Key"
-        "link" "#signup"
-      )
-      "documentation" (dict
-        "enable" true
-        "label" "View Documentation"
-        "link" "#docs"
-      )
-    )
+    "title" (printf "%s Features" $hero_heading)
+    "description" (printf "Our %s provides comprehensive functionality for all your scraping needs." $hero_heading)
   }}
 
   {{/* Add page */}}
@@ -58,13 +40,11 @@
     "path"    $slug
     "title"   $title
     "params"  (dict
-      "page_name"           $page_name
       "meta_description"    $meta_description  
       "hero_heading"        $hero_heading
       "hero_intro"          $hero_intro
       "benefits"            $benefits
       "api_section"         $api_section
-      "results_section"     $results_section
     )
   ) }}
 {{ end }} 
