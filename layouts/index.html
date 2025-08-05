@@ -2,108 +2,27 @@
 <h2>ScrapingBee API Collection</h2>
 <p>Explore our powerful web scraping APIs designed to help you extract data from any website with ease.</p>
 
-<!-- Navigation to Scrapers Section -->
-<div style="text-align: center; margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #0066cc;">
-    <h3>🚀 Available Web Scraping APIs</h3>
-    <p>Browse our complete collection of specialized scraping tools</p>
-    <a href="{{ "/scrapers/" | relURL }}" style="background: #0066cc; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block; font-weight: bold;">
-        View All Scrapers →
-    </a>
-</div>
+{{ $scrapers := index site.Data "gen-posts" "scrapers" }}
 
-
-
-<!-- Quick Links Section -->
-<div style="text-align: center; margin: 40px 0; padding: 20px; background: #e8f4f8; border-radius: 8px;">
-    <h3>🔗 Quick Links</h3>
-    <div style="display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap;">
-        <a href="{{ "/scrapers/" | relURL }}" style="background: #17a2b8; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
-            📋 All Scrapers
-        </a>
-        <a href="{{ "/scrapers/scrapingbee/" | relURL }}" style="background: #6f42c1; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
-            🛒 Google Shopping
-        </a>
-        <a href="{{ "/scrapers/google-maps-scraper/" | relURL }}" style="background: #e83e8c; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
-            🗺️ Google Maps
-        </a>
-        <a href="{{ "/scrapers/ebay-scraper/" | relURL }}" style="background: #fd7e14; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">
-            🛍️ eBay Scraper
-        </a>
+<div class="scraper-grid">
+    {{ range $scrapers }}
+    <div class="scraper-card">
+        <h3><a href="{{ printf "/scrapers/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+        <p><strong>{{ .hero_heading }}</strong></p>
+        <p>{{ .description }}</p>
+        
+        {{ if .benefits }}
+        <h4>Key Benefits:</h4>
+        <ul class="benefits">
+            {{ range .benefits }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        
+        <p><a href="{{ printf "/scrapers/%s/" .slug | relURL }}" style="background: #0066cc; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More →</a></p>
     </div>
-</div>
-
-<!-- How-To Manual Section -->
-<div style="margin: 50px 0; padding: 30px; background: #fff3cd; border-radius: 8px; border-left: 5px solid #ffc107;">
-    <h3>📚 How to Add New Scrapers (Developer Guide)</h3>
-    <p style="margin-bottom: 20px; color: #856404;"><strong>This site uses Hugo Content Adapters to automatically generate pages from CSV data!</strong></p>
-    
-    <div style="background: white; padding: 20px; border-radius: 6px; margin: 20px 0;">
-        <h4>🔧 Quick Setup:</h4>
-        <ol style="line-height: 1.8; color: #333;">
-            <li><strong>Edit CSV File:</strong> <code>assets/gen-posts.csv</code></li>
-            <li><strong>Add New Row:</strong> Fill in all 8 columns (slug, title, description, etc.)</li>
-            <li><strong>Build Site:</strong> Run <code>hugo</code> or <code>hugo server</code></li>
-            <li><strong>Done!</strong> New page available at <code>/scrapers/{slug}/</code></li>
-        </ol>
-    </div>
-
-    <div style="background: white; padding: 20px; border-radius: 6px; margin: 20px 0;">
-        <h4>📋 CSV Column Reference:</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
-            <div style="padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>slug:</strong><br>
-                <small>URL path (e.g., "google-maps-scraper")</small>
-            </div>
-            <div style="padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>title_tag_goes_here:</strong><br>
-                <small>HTML title tag for SEO</small>
-            </div>
-            <div style="padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>meta_description_goes_here:</strong><br>
-                <small>Meta description for SEO</small>
-            </div>
-            <div style="padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>hero_section_heading:</strong><br>
-                <small>Main heading on page</small>
-            </div>
-            <div style="padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>hero_section_intro:</strong><br>
-                <small>Intro paragraph text</small>
-            </div>
-            <div style="padding: 10px; background: #f8f9fa; border-radius: 4px;">
-                <strong>benefit_variable_1,2,3:</strong><br>
-                <small>Three key benefit points</small>
-            </div>
-        </div>
-    </div>
-
-    <div style="background: white; padding: 20px; border-radius: 6px; margin: 20px 0;">
-        <h4>⚡ Features:</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
-            <div>✅ <strong>No .md files needed</strong></div>
-            <div>✅ <strong>Automatic URL generation</strong></div>
-            <div>✅ <strong>Live reload support</strong></div>
-            <div>✅ <strong>SEO-friendly pages</strong></div>
-            <div>✅ <strong>Content Adapters (Hugo v0.126+)</strong></div>
-            <div>✅ <strong>CSV-driven workflow</strong></div>
-        </div>
-    </div>
-
-    <div style="background: #d4edda; padding: 15px; border-radius: 6px; border: 1px solid #c3e6cb;">
-        <h4 style="color: #155724; margin-top: 0;">💡 Example CSV Row:</h4>
-        <code style="display: block; background: white; padding: 10px; border-radius: 4px; font-size: 0.9em; word-break: break-all;">
-            "youtube-scraper","YouTube Data Scraper | ScrapingBee","Extract YouTube video data, comments, and metadata with our powerful API","YouTube Data Scraper","Get comprehensive YouTube data including videos, playlists, comments, and channel information","Extract video metadata and statistics","Get comments and engagement data","Monitor trending content and analytics"
-        </code>
-    </div>
-
-    <div style="text-align: center; margin-top: 25px;">
-        <a href="https://github.com/borntojesus/scrapingbee-hugo" target="_blank" style="background: #6c757d; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 5px;">
-            📂 View Source Code
-        </a>
-        <a href="https://gohugo.io/content-management/content-adapters/" target="_blank" style="background: #0066cc; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 0 5px;">
-            📖 Hugo Content Adapters Docs
-        </a>
-    </div>
+    {{ end }}
 </div>
 
 <div style="text-align: center; margin: 40px 0; padding: 20px; background: #f0f8ff; border-radius: 8px;">

@@ -3,34 +3,22 @@
     "tags": [
       "a",
       "body",
-      "br",
-      "code",
       "div",
       "footer",
       "h1",
       "h2",
       "h3",
-      "h4",
       "head",
       "header",
       "html",
-      "li",
       "main",
       "meta",
-      "ol",
       "p",
-      "script",
       "section",
-      "small",
-      "span",
-      "strong",
       "style",
-      "title",
-      "ul"
+      "title"
     ],
     "classes": [
-      "benefits",
-      "scraper-card",
       "scraper-grid"
     ],
     "ids": null

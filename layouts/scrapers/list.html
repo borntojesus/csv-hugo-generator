@@ -1,65 +1,27 @@
 {{ define "main" }}
-<div style="text-align: center; margin-bottom: 40px;">
-    <h1>{{ .Title }}</h1>
-    <p style="font-size: 1.2em; color: #666;">Browse all available scraper APIs and find the perfect tool for your data extraction needs.</p>
-    <div style="margin: 20px 0;">
-        <span style="background: #e8f4f8; padding: 8px 16px; border-radius: 20px; color: #0066cc; font-weight: bold;">
-            {{ len .RegularPages }} APIs Available
-        </span>
-    </div>
-</div>
+<h2>{{ .Title }}</h2>
+<p>Browse all available scraper APIs:</p>
+
+{{ $scrapers := index site.Data "gen-posts" "scrapers" }}
 
 <div class="scraper-grid">
-    {{ range .RegularPages }}
+    {{ range $scrapers }}
     <div class="scraper-card">
-        <h3><a href="{{ .RelPermalink }}" style="color: #0066cc; text-decoration: none;">{{ .Params.hero_heading }}</a></h3>
-        <p style="color: #666;">{{ .Params.meta_description | truncate 120 "..." }}</p>
+        <h3><a href="{{ printf "/scrapers/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+        <p><strong>{{ .hero_heading }}</strong></p>
+        <p>{{ .description }}</p>
         
-        {{ if .Params.benefits }}
+        {{ if .benefits }}
         <h4>Key Benefits:</h4>
         <ul class="benefits">
-            {{ range .Params.benefits }}
-            <li>{{ . | truncate 100 "..." }}</li>
+            {{ range .benefits }}
+            <li>{{ . }}</li>
             {{ end }}
         </ul>
         {{ end }}
         
-        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-            <a href="{{ .RelPermalink }}" style="background: #0066cc; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-block; font-size: 0.9em;">
-                Learn More →
-            </a>
-            <span style="background: #f8f9fa; color: #6c757d; padding: 8px 12px; border-radius: 4px; font-size: 0.8em;">
-                /{{ .File.BaseFileName }}/
-            </span>
-        </div>
+        <p><a href="{{ printf "/scrapers/%s/" .slug | relURL }}" style="background: #0066cc; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; display: inline-block;">Learn More →</a></p>
     </div>
     {{ end }}
-</div>
-
-<!-- Back to Home Button -->
-<div style="text-align: center; margin: 40px 0;">
-    <a href="{{ "/" | relURL }}" style="background: #6c757d; color: white; padding: 12px 24px; border-radius: 4px; text-decoration: none; display: inline-block;">
-        ← Back to Home
-    </a>
-</div>
-
-<!-- Stats Section -->
-<div style="background: #f8f9fa; padding: 30px; border-radius: 8px; text-align: center; margin: 40px 0;">
-    <h3>🚀 Powered by Hugo Content Adapters</h3>
-    <p>All {{ len .RegularPages }} scraper pages are automatically generated from CSV data using Hugo v0.126+ Content Adapters.</p>
-    <div style="display: flex; justify-content: center; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
-        <div style="background: white; padding: 15px; border-radius: 6px; min-width: 120px;">
-            <strong style="font-size: 1.2em; color: #0066cc;">{{ len .RegularPages }}</strong><br>
-            <small>API Pages</small>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 6px; min-width: 120px;">
-            <strong style="font-size: 1.2em; color: #28a745;">CSV</strong><br>
-            <small>Data Source</small>
-        </div>
-        <div style="background: white; padding: 15px; border-radius: 6px; min-width: 120px;">
-            <strong style="font-size: 1.2em; color: #fd7e14;">Auto</strong><br>
-            <small>Generation</small>
-        </div>
-    </div>
 </div>
 {{ end }}
